@@ -1,0 +1,141 @@
+section
+  background-color: #fff
+  &:nth-child(even)
+    background-color: #fafafa
+
+.container
+  width: 1170px
+  margin-left: auto
+  margin-right: auto
+  zoom: 1
+  &:before
+    display: table
+    content: ''
+  &:after
+    display: table
+    content: ''
+    clear: both
+  &V--lg
+    padding-top: 110px
+    padding-bottom: 110px
+  &V--md
+    padding-top: 80px
+    padding-bottom: 80px
+  &V--sm
+    padding-top: 40px
+    padding-bottom: 40px
+
+.container--sm
+  width: 970px
+  margin-left: auto
+  margin-right: auto
+  zoom: 1
+  &:before
+    display: table
+    content: ''
+  &:after
+    display: table
+    content: ''
+    clear: both
+
+.container--fullWidth
+  margin-left: auto
+  margin-right: auto
+  &:before
+    display: table
+    content: ''
+  &:after
+    display: table
+    content: ''
+    clear: both
+
+.row
+  margin-left: -15px
+  margin-right: -15px
+  &:before
+    display: table
+    content: ''
+    zoom: 1
+  &:after
+    display: table
+    content: ''
+    zoom: 1
+    clear: both
+
+// Products
+.wrap--product
+  // background: $color-secondary
+
+.product
+  &Title
+    text-align: center
+  &Text
+    text-align: center
+
+.wrap--service
+  // background-color: #fafafa
+
+.wrap--promote
+  position: relative
+  background: url(../img/1920x1080/02.jpg) no-repeat fixed
+  background-size: cover
+  min-height: 100%
+  z-index: 1
+
+.promoteTitle
+  color: $color-secondary
+  font-size: 40px
+  text-align: center
+.promoteText
+  color: $color-secondary
+  text-align: center
+
+.Flex
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-flow: row nowrap
+  justify-content: space-between
+  &-item
+    padding-left: 2px
+    padding-right: 2px
+    &:last-child
+      margin-right: 0px
+
+.wrap--pricing
+  background-color: #fafafa
+
+.wrap--review
+
+.Review-text
+  position: relative
+  width: 70%
+  padding-left: 30px
+  &:before
+    content: '\"'
+    position: absolute
+    top: -7px
+    left: 0
+    font-size: 50px
+    color: $color-base
+
+.Review-footer
+  padding-left: 30px
+
+.footer
+  padding-top: 50px
+  padding-bottom: 50px
+  border-top: 1px solid #eee
+  border-bottom: 1px solid #eee
+
+.copyright
+  &-logo
+    display: inline-block
+    float: left
+    background: url('../img/logo-dark.png')
+    background-size: 100%
+    width: 100px
+    height: 19px
+  &-text
+    display: inline-block
+    float: right

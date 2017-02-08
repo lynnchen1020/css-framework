@@ -1,0 +1,31 @@
+// -----------------------------------------------------------------------------
+// This file contains only structural styles, such as dimensions
+// (width/height), padding, margins, alignment of Button classes.
+// -----------------------------------------------------------------------------
+
+
+$btn-pd: 20px 30px
+$btn-pd-sm: 15px 40px
+$btn-border-radius: 4px
+
+%btn
+  display: inline-block
+  transition: 0.3s
+  position: relative
+  padding: $btn-pd
+  text-align: center
+
+
+
+.Button
+  @extend %btn
+  &--primary
+    background-color: $color-secondary
+    color: #333
+  &--secondary
+    padding: $btn-pd-sm
+    background-color: #ddd
+    color: #555
+  &:hover
+    color: $color-secondary
+    background-color: $color-base

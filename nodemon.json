@@ -1,0 +1,11 @@
+{
+  "ignore": [
+    ".git",
+    "/node-modules/",
+    "client/"
+  ],
+  "env": {
+    "NODE_ENV": "dev"
+  },
+  "ext": "js json"
+}

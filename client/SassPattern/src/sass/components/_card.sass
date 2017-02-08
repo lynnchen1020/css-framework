@@ -1,0 +1,46 @@
+
+%card
+  // width: 300px
+  // height: 250px
+
+
+// Card grid
+.CardGroup
+  .Card
+    width: 33.33333%
+    height: auto
+    float: left
+    padding-left: 15px
+    padding-right: 15px
+    box-sizing: border-box
+    &-avatar
+      // width: (1110 / 3)px
+      display: block
+      max-width: 100%
+      height: auto
+      // background-image: url(../img/970x647/01.jpg)
+    &-heading
+      font-size: 22px
+      span
+        margin-left: 10px
+        color: #a6a7aa
+        font-size: 16px
+    &-body
+      color: #a6a7aa
+    &-btn
+      position: relative
+      color: #81848f
+      &:after
+        content: ''
+        position: absolute
+        top: 11px
+        right: -15px
+        background-color: $color-base
+        height: 2px
+        width: 7px
+.box
+  float: left
+  width: 50%
+  img
+    max-width: 100%
+    height: auto

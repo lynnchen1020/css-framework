@@ -1,0 +1,206 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    title Sass 7-1 Pattern
+
+  body
+    section#Header.wrap--header
+      .container
+        header
+          h1.logo
+            a
+          nav.Menu
+            ul.Menulist
+              li
+                a.is-selected(href="#") HOME
+              li
+                a(href="#Products") PRODUCTS
+              li
+                a(href="#Service") SERVICE
+              li
+                a(href="#Work") WORK
+              li
+                a(href="#Press") PRESS
+              li
+                a(href="#Contact") CONTACT
+    section.wrap--slider
+      .container
+        .Slider
+          h1.Slider-title.
+            Digital Product Agency
+          p.Slider-text Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        a(href="#").Button.Button--primary.
+          WATCH INTRO VIDEO
+    section#Products.wrap--product
+      .container.containerV--lg
+          .row
+            .product
+              h2.productTitle.
+                Latest Products
+              p.productText.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do  eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          .row
+            .CardGroup
+              .Card
+                img.Card-avatar(src=require('./src/img/970x647/01.jpg'))
+                h3.Card-heading Workspace
+                  span title
+                p.Card-body.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                a(href="#").Card-btn.
+                  Read more
+              .Card
+                img.Card-avatar(src=require('./src/img/970x647/02.jpg'))
+                h3.Card-heading Workspace
+                  span title
+                p.Card-body.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                a(href="#").Card-btn.
+                  Read more
+              .Card
+                img.Card-avatar(src=require('./src/img/970x647/03.jpg'))
+                h3.Card-heading Workspace
+                  span title
+                p.Card-body.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                a(href="#").Card-btn.
+                  Read more
+
+      .container--fullWidth
+        .box
+          img(src=require('./src/img/970x647/01.jpg'))
+        .box
+          img(src=require('./src/img/970x647/03.jpg'))
+    section#Service.wrap--service
+      .container.containerV--lg
+        .row.margin-bt-2.row-space-2
+          .Flip.padding-lr-2
+            .Flip-body
+              h3.Flip-title.
+                Act of Coding
+              p.Flip-text.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          .Flip.padding-lr-2
+            .Flip-body
+              h3.Flip-title.
+                Act of Coding
+              p.Flip-text.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          .Flip.padding-lr-2
+            .Flip-body
+              h3.Flip-title.
+                Act of Coding
+              p.Flip-text.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        .row.row-space-2
+          .Flip.padding-lr-2
+            .Flip-body
+              h3.Flip-title.
+                Act of Coding
+              p.Flip-text.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          .Flip.padding-lr-2
+            .Flip-body
+              h3.Flip-title.
+                Act of Coding
+              p.Flip-text.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          .Flip.padding-lr-2
+            .Flip-body
+              h3.Flip-title.
+                Act of Coding
+              p.Flip-text.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    section.wrap--promote
+      .container--sm.containerV--lg
+        h2.promoteTitle.
+          Display Your Promotion Here
+        p.promoteText.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    section#Work.wrap--work
+      .container.containerV--md
+        .Flex
+          .Flex-item
+            img(src=require('./src/img/800x400/01.jpg')).img-fluid
+          .Flex-item
+            img(src=require('./src/img/397x400/01.jpg')).img-fluid
+        .Flex
+          .Flex-item
+            img(src=require('./src/img/397x300/01.jpg')).img-fluid
+          .Flex-item
+            img(src=require('./src/img/397x300/02.jpg')).img-fluid
+          .Flex-item
+            img(src=require('./src/img/397x300/03.jpg')).img-fluid
+    section#Press.wrap--pricing
+      .container.containerV--lg
+        .row.margin-bt-2.row-space-2
+          .Flip.padding-lr-2
+            .Flip-body
+              h3.Flip-title.
+                Starter Kit - $ 49
+              p.Flip-text.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              ul.List.margin-bt-40
+                li.listItem Basic Features
+                li.listItem Up to 5 Products
+                li.listItem 50 Users Panels
+              a(href="#").Button.Button--secondary.
+                Check
+          .Flip.padding-lr-2
+            .Flip-body.Flip-body-active
+              h3.Flip-title.
+                Professional - $ 149
+              p.Flip-text.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              ul.List.margin-bt-40
+                li.listItem Basic Features
+                li.listItem Up to 5 Products
+                li.listItem 50 Users Panels
+              a(href="#").Button.Button--secondary.
+                Check
+          .Flip.padding-lr-2
+            .Flip-body
+              h3.Flip-title.
+                Advanced - $ 249
+              p.Flip-text.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              ul.List.margin-bt-40
+                li.listItem Basic Features
+                li.listItem Up to 5 Products
+                li.listItem 50 Users Panels
+              a(href="#").Button.Button--secondary.
+                Check
+    .wrap--review
+      .container.containerV--md
+        h2.Review-title.
+          Customer Reviews
+        p.Review-text.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        p.Review-footer
+          small
+            b Alex Clarson
+            span  Metronic Customer
+    section.footer
+      .container.containerV-lg
+        .footer-body
+          ul.List.List--fl
+            li.listItem Home
+            li.listItem About
+            li.listItem Work
+            li.listItem Contact
+          ul.List.List--fl
+            li.listItem Twitter
+            li.listItem Facebook
+            li.listItem Instagram
+            li.listItem Youtube
+          ul.List.List--fl
+            li.listItem Subscribe to Our Newsletter
+            li.listItem Privacy Policy
+            li.listItem Terms & Conditions
+    section.copyright
+      .container.containerV--sm
+        span.copyright-logo
+        span.copyright-text Aironepage
+          small  Theme Powered by: KeenThemes.com

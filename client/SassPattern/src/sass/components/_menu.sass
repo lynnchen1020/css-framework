@@ -1,0 +1,37 @@
+.Menu
+.Menulist
+  margin: 0
+  padding: 0
+  float: right
+
+.Menulist > li
+  position: relative
+  float: left
+  list-style: none
+
+.Menulist > li > a
+  display: block
+  padding: 30px 20px
+  text-align: center
+  font-size: 12px
+  line-height: 30px
+  &:hover
+    &:before
+      content: ''
+      position: absolute
+      top: 43px
+      left: 6px
+      display: inline-block
+      width: 8px
+      height: 2px
+      background-color: $color-base
+  &.is-selected
+    &:before
+      content: ''
+      position: absolute
+      top: 43px
+      left: 6px
+      display: inline-block
+      width: 7px
+      height: 2px
+      background-color: $color-base
