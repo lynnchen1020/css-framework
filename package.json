@@ -4,7 +4,8 @@
   "description": "css practice",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dashboard -c blue -- supervisor -i client/ ./app.js"
+    "dev": "webpack-dashboard -c blue -- supervisor -i client/ ./app.js",
+    "prod": "webpack"
   },
   "repository": {
     "type": "git",

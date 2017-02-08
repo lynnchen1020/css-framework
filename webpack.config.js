@@ -2,8 +2,9 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const DashboardPlugin = require('webpack-dashboard/plugin')
-const publicPath = 'http://localhost:8080/'
+const publicPath = ''
 const webPackMiddleware = 'webpack-hot-middleware/client?reload=true'
 const lost = require('lost')
 const autoprefixer = require('autoprefixer')
@@ -57,7 +58,7 @@ const config = {
       },
       {
         test: /\.sass$/,
-        loader: 'style!css!postcss!sass'
+        loader: ExtractTextPlugin.extract('style', 'css!postcss!sass')
       },
       {
         test: /\.(jpe?g|JPE?G|png|PNG|gif|GIF|svg|SVG)(\?v=\d+\.\d+\.\d+)?$/,
@@ -82,10 +83,7 @@ const config = {
       template: './client/SassPattern/index.pug',
       filename: 'index.html'
     }),
-    new HtmlWebpackPlugin({
-      template: './client/SassPattern/test.pug',
-      filename: 'test.html'
-    }),
+    new ExtractTextPlugin('style.css'),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()

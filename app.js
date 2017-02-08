@@ -16,7 +16,7 @@ const browserSync = require('browser-sync').create()
 
 const port = 8080
 
-server.use(express.static('dist'))
+// server.use(express.static('dist'))
 
 // 注册中間件
 server.use(webpackDevMiddleware(compiler, {
