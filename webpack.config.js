@@ -3,40 +3,15 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const DashboardPlugin = require('webpack-dashboard/plugin')
 const publicPath = ''
-const webPackMiddleware = 'webpack-hot-middleware/client?reload=true'
-const lost = require('lost')
 const autoprefixer = require('autoprefixer')
 
 const postcss = require('postcss')
-const sprites = require('postcss-sprites')
-const updateRule = require('postcss-sprites/lib/core').updateRule
-
-// const opts = {
-//     stylesheetPath: './client/SassPattern/src/sass',
-//     spritePath: './client/SassPattern/src/img/icons/',
-//     hooks: {
-//         onUpdateRule: function(rule, token, image) {
-//             // Use built-in logic for background-image & background-position
-//             updateRule(rule, token, image)
-//             let width, height
-//             ['width', 'height'].forEach(function(prop) {
-//                 rule.insertAfter(rule.last, postcss.decl({
-//                     prop: prop,
-//                     value: image.coords[prop] + 'px'
-//                 }))
-//             })
-//         }
-//     }
-// }
 
 
-
-const config = {
+module.exports = {
   entry: [
-    path.resolve(__dirname, 'client/SassPattern/src'),
-    webPackMiddleware
+    path.resolve(__dirname, 'client/SassPattern/src')
   ],
 
   output: {
@@ -72,22 +47,15 @@ const config = {
   },
   postcss: () => {
     return [
-      autoprefixer, lost
-      // autoprefixer, sprites(opts), lost
+      autoprefixer
     ]
   },
-  devtool: 'cheap-module-eval-source-map',
 
   plugins: [
     new HtmlWebpackPlugin({
       template: './client/SassPattern/index.pug',
       filename: 'index.html'
     }),
-    new ExtractTextPlugin('style.css'),
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new ExtractTextPlugin('style.css')
   ]
 }
-
-module.exports = config

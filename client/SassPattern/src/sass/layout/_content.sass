@@ -41,6 +41,7 @@ section
 .container--fullWidth
   margin-left: auto
   margin-right: auto
+  overflow: hidden
   &:before
     display: table
     content: ''
@@ -66,10 +67,10 @@ section
 .wrap--product
   // background: $color-secondary
 
-.product
-  &Title
+.Product
+  &-title
     text-align: center
-  &Text
+  &-text
     text-align: center
 
 .wrap--service
@@ -82,25 +83,11 @@ section
   min-height: 100%
   z-index: 1
 
-.promoteTitle
-  color: $color-secondary
-  font-size: 40px
-  text-align: center
-.promoteText
+.Promote
   color: $color-secondary
   text-align: center
-
-.Flex
-  display: -webkit-flex
-  display: -ms-flex
-  display: flex
-  flex-flow: row nowrap
-  justify-content: space-between
-  &-item
-    padding-left: 2px
-    padding-right: 2px
-    &:last-child
-      margin-right: 0px
+  &-title
+    font-size: 40px
 
 .wrap--pricing
   background-color: #fafafa
@@ -121,21 +108,3 @@ section
 
 .Review-footer
   padding-left: 30px
-
-.footer
-  padding-top: 50px
-  padding-bottom: 50px
-  border-top: 1px solid #eee
-  border-bottom: 1px solid #eee
-
-.copyright
-  &-logo
-    display: inline-block
-    float: left
-    background: url('../img/logo-dark.png')
-    background-size: 100%
-    width: 100px
-    height: 19px
-  &-text
-    display: inline-block
-    float: right

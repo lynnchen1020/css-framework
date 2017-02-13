@@ -211,6 +211,11 @@ a {
   color: #fff;
   text-decoration: none; }
 
+button {
+  cursor: pointer;
+  border: none;
+  outline: none; }
+
 section {
   background-color: #fff; }
   section:nth-child(even) {
@@ -253,7 +258,8 @@ section {
 
 .container--fullWidth {
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  overflow: hidden; }
   .container--fullWidth:before {
     display: table;
     content: ''; }
@@ -275,10 +281,10 @@ section {
     zoom: 1;
     clear: both; }
 
-.productTitle {
+.Product-title {
   text-align: center; }
 
-.productText {
+.Product-text {
   text-align: center; }
 
 .wrap--promote {
@@ -288,30 +294,11 @@ section {
   min-height: 100%;
   z-index: 1; }
 
-.promoteTitle {
-  color: #fff;
-  font-size: 40px;
-  text-align: center; }
-
-.promoteText {
+.Promote {
   color: #fff;
   text-align: center; }
-
-.Flex {
-  display: -ms-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: row nowrap;
-      flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
-  .Flex-item {
-    padding-left: 2px;
-    padding-right: 2px; }
-    .Flex-item:last-child {
-      margin-right: 0px; }
+  .Promote-title {
+    font-size: 40px; }
 
 .wrap--pricing {
   background-color: #fafafa; }
@@ -331,38 +318,29 @@ section {
 .Review-footer {
   padding-left: 30px; }
 
-.footer {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee; }
-
-.copyright-logo {
-  display: inline-block;
-  float: left;
-  background: url(client/SassPattern/src/img/logo-dark.png);
-  background-size: 100%;
-  width: 100px;
-  height: 19px; }
-
-.copyright-text {
-  display: inline-block;
-  float: right; }
-
-.icon1 {
-  background: url(client/SassPattern/src/img/icons/Whatsapp.png) no-repeat 0 0; }
-
-.icon2 {
-  background: url(client/SassPattern/src/img/icons/Youtube.png) no-repeat 0 0; }
-
-.icon3 {
-  background: url(client/SassPattern/src/img/icons/Behance.png) no-repeat 0 0; }
-
-.icon4 {
-  background: url(client/SassPattern/src/img/icons/RSS.png) no-repeat 0 0; }
-
-.icon5 {
-  background: url(client/SassPattern/src/img/icons/Youtube.png) no-repeat 0 0; }
+.Flex {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .Flex-item {
+    padding-left: 2px;
+    padding-right: 2px; }
+    .Flex-item:last-child {
+      margin-right: 0px; }
+    .Flex-item.flex1 {
+      -webkit-box-flex: 1;
+          -ms-flex: 1 0 33%;
+              flex: 1 0 33%; }
+    .Flex-item.flex2 {
+      -webkit-box-flex: 2;
+          -ms-flex: 2 0 66%;
+              flex: 2 0 66%; }
 
 .wrap--header {
   position: fixed;
@@ -418,6 +396,24 @@ header #logo {
   color: #fff;
   font-size: 25px; }
 
+footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee; }
+
+.copyright-logo {
+  display: inline-block;
+  float: left;
+  background: url(client/SassPattern/src/img/logo-dark.png);
+  background-size: 100%;
+  width: 100px;
+  height: 19px; }
+
+.copyright-text {
+  display: inline-block;
+  float: right; }
+
 .Button {
   display: inline-block;
   -webkit-transition: 0.3s;
@@ -442,19 +438,19 @@ header #logo {
 .Menulist {
   margin: 0;
   padding: 0;
-  float: right; }
+  float: right;
+  list-style: none; }
 
 .Menulist > li {
   position: relative;
-  float: left;
-  list-style: none; }
+  float: left; }
 
 .Menulist > li > a {
   display: block;
   padding: 30px 20px;
   text-align: center;
   font-size: 12px;
-  line-height: 30px; }
+  line-height: 2.5; }
   .Menulist > li > a:hover:before {
     content: '';
     position: absolute;
@@ -475,12 +471,13 @@ header #logo {
     background-color: #17bed2; }
 
 .CardGroup .Card {
-  width: 33.33333%;
+  width: calc((100% - (3 - 1) * 30px ) / 3);
   height: auto;
   float: left;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin-right: 30px;
   box-sizing: border-box; }
+  .CardGroup .Card:nth-child(3n) {
+    margin-right: 0px; }
   .CardGroup .Card-avatar {
     display: block;
     max-width: 100%;
@@ -505,25 +502,35 @@ header #logo {
       height: 2px;
       width: 7px; }
 
-.box {
-  float: left;
-  width: 50%; }
-  .box img {
-    max-width: 100%;
-    height: auto; }
+.imgBox01 {
+  width: 50%;
+  height: 0px;
+  margin-left: -2px;
+  padding-bottom: calc( 647 / 970 * 100% / 2);
+  background: url(client/SassPattern/src/img/970x647/01.jpg) no-repeat;
+  background-size: cover;
+  float: left; }
+
+.imgBox02 {
+  margin-right: -2px;
+  float: right;
+  width: 50%;
+  height: 0px;
+  padding-bottom: calc( 647 / 970 * 100% / 2);
+  background: url(client/SassPattern/src/img/970x647/03.jpg) no-repeat;
+  background-size: cover; }
 
 .Flip {
   float: left;
-  width: 33.33333%;
-  padding-left: 15px;
-  padding-right: 15px;
-  box-sizing: border-box; }
-
-.Flip-body {
-  min-height: 100%;
-  padding: 50px;
-  background-color: #fff; }
-  .Flip-body-active {
+  width: calc((100% - 3px * (3 - 1)) / 3);
+  margin-right: 3px;
+  box-sizing: border-box;
+  margin-bottom: 3px;
+  background-color: #fff;
+  padding: 50px; }
+  .Flip:nth-child(3n) {
+    margin-right: 0; }
+  .Flip.is-active {
     padding-top: 110px;
     padding-bottom: 110px;
     margin-top: -60px; }
@@ -531,12 +538,12 @@ header #logo {
 .List {
   list-style: none;
   margin: 0;
-  padding: 0; }
-  .List > .listItem {
+  padding: 20px 0 40px 0; }
+  .List-item {
     position: relative;
     margin-bottom: 15px;
     padding-left: 12px; }
-    .List > .listItem:before {
+    .List-item:before {
       content: '';
       position: absolute;
       top: 9px;
@@ -547,17 +554,17 @@ header #logo {
   .List--fl {
     float: left;
     margin-right: 140px; }
-    .List--fl > .listItem {
+    .List--fl > .List-item {
       margin-bottom: 26px;
       padding-left: 0px; }
-      .List--fl > .listItem:before {
+      .List--fl > .List-item:before {
         content: '';
         position: absolute;
         top: 0px;
         background-color: #fff;
         width: 0px;
         height: 0px; }
-      .List--fl > .listItem:hover {
+      .List--fl > .List-item:hover {
         color: #999; }
 
 .u-floatLeft {

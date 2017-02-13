@@ -1,0 +1,55 @@
+
+%card
+  // width: 300px
+  // height: 250px
+
+
+// Card grid
+.CardGroup
+  .Card
+    width: calc((100% - (3 - 1) * 30px ) / 3)
+    height: auto
+    float: left
+    margin-right: 30px
+    box-sizing: border-box
+    &:nth-child(3n)
+      margin-right: 0px
+    &-avatar
+      display: block
+      max-width: 100%
+      height: auto
+    &-heading
+      font-size: 22px
+      span
+        margin-left: 10px
+        color: #a6a7aa
+        font-size: 16px
+    &-body
+      color: #a6a7aa
+    &-btn
+      position: relative
+      color: #81848f
+      &:after
+        content: ''
+        position: absolute
+        top: 11px
+        right: -15px
+        background-color: $color-base
+        height: 2px
+        width: 7px
+.imgBox01
+  width: 50%
+  height: 0px
+  margin-left: -2px
+  padding-bottom: calc( 647 / 970 * 100% / 2 )
+  background: url('../img/970x647/01.jpg') no-repeat
+  background-size: cover
+  float: left
+.imgBox02
+  margin-right: -2px
+  float: right
+  width: 50%
+  height: 0px
+  padding-bottom: calc( 647 / 970 * 100% / 2 )
+  background: url('../img/970x647/03.jpg') no-repeat
+  background-size: cover

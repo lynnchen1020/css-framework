@@ -1,0 +1,15 @@
+.Flex
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-flow: row wrap
+  justify-content: space-between
+  &-item
+    padding-left: 2px
+    padding-right: 2px
+    &:last-child
+      margin-right: 0px
+    &.flex1
+      flex: 1 0 33%
+    &.flex2
+      flex: 2 0 66%

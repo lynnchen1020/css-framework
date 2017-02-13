@@ -9,7 +9,16 @@
 // Font
 // --------------------------------------------------
 
-
+// --------------------------------------------------
+// Grid
+// --------------------------------------------------
+@mixin grid($col, $col-gutter)
+  float: left
+  width: calc((100% - #{$col-gutter } * (#{$col} - 1)) / #{$col} )
+  margin-right: $col-gutter
+  box-sizing: border-box
+  &:nth-child(#{$col}n)
+    margin-right: 0
 
 // --------------------------------------------------
 // Positioning

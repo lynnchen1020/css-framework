@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dashboard -c blue -- supervisor -i client/ ./app.js",
-    "prod": "webpack"
+    "build": "npm run clear && webpack && browser-sync start -s dist --port 8888",
+    "clear": "rm -rf ./dist"
   },
   "repository": {
     "type": "git",
