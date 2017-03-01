@@ -2,7 +2,6 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const DashboardPlugin = require('webpack-dashboard/plugin')
 const publicPath = ''
 const webPackMiddleware = 'webpack-hot-middleware/client?reload=true'
@@ -58,7 +57,6 @@ const config = {
       },
       {
         test: /\.sass$/,
-        // loader: ExtractTextPlugin.extract('style', 'css!postcss!sass')
         loader: 'style!css!postcss!sass'
       },
       {

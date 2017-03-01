@@ -33,7 +33,7 @@ module.exports = {
       },
       {
         test: /\.sass$/,
-        loader: ExtractTextPlugin.extract('style', 'css!postcss!sass')
+        loader: ExtractTextPlugin.extract('style', 'css!postcss!sass?outputStyle=expanded')
       },
       {
         test: /\.(jpe?g|JPE?G|png|PNG|gif|GIF|svg|SVG)(\?v=\d+\.\d+\.\d+)?$/,
